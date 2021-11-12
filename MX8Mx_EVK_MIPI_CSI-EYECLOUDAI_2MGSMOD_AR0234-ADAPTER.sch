@@ -152,12 +152,8 @@ Wire Wire Line
 	4500 1375 4500 1675
 Wire Wire Line
 	3250 1675 4500 1675
-Connection ~ 4500 1675
-Wire Wire Line
-	4500 1675 4500 2175
 Wire Wire Line
 	3250 2175 4500 2175
-Connection ~ 4500 2175
 Wire Wire Line
 	4500 2175 4500 2475
 Wire Wire Line
@@ -190,12 +186,6 @@ Text Label 3475 1975 0    50   ~ 0
 I2C_SDA_1V8
 Text Label 3475 2075 0    50   ~ 0
 I2C_SCL_1V8
-Text Label 975  4250 0    50   ~ 0
-I2C_SCL_1V8
-Text Label 975  4150 0    50   ~ 0
-I2C_SDA_1V8
-Text Label 875  5750 0    50   ~ 0
-CSI_MCLK_1V8
 $Comp
 L 1888863-4:1888863-4 J1
 U 1 1 60AAB188
@@ -217,10 +207,10 @@ CSI_DP0__SD_LVDS0_P
 Wire Wire Line
 	4300 1275 3250 1275
 $Comp
-L Connector:TestPoint TP1
+L Connector:TestPoint TP3
 U 1 1 610FA21D
 P 1200 1975
-F 0 "TP1" V 1303 2047 50  0000 C CNN
+F 0 "TP3" V 1303 2047 50  0000 C CNN
 F 1 "TestPoint" V 1304 2047 50  0001 C CNN
 F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1400 1975 50  0001 C CNN
 F 3 "~" H 1400 1975 50  0001 C CNN
@@ -273,9 +263,9 @@ FRAME_VALID
 Text Label 7950 2625 0    50   ~ 0
 TRIGGER
 Text Label 7950 3125 0    50   ~ 0
-I2C_CLK_3V3
+I2C_SCL_1V8
 Text Label 7950 2525 0    50   ~ 0
-I2C_DAT_3V3
+I2C_SDA_1V8
 Text Label 7950 2025 0    50   ~ 0
 CSI_DP0__SD_LVDS0_P
 Text Label 7950 2225 0    50   ~ 0
@@ -294,10 +284,6 @@ Text Label 7950 1625 0    50   ~ 0
 CSI_CLK_N__SPCLK_LVDS0_N
 Text Label 7950 1725 0    50   ~ 0
 CSI_CLK_P__SPCLK_LVDS0_P
-Text Label 850  5250 0    50   ~ 0
-CSI_nRST_1V8
-Text Label 850  5150 0    50   ~ 0
-CSI_PWDN_1V8
 $Comp
 L 3-1734592-0:3-1734592-0 J2
 U 1 1 618E32A6
@@ -407,11 +393,11 @@ $EndComp
 Wire Wire Line
 	850  2775 2250 2775
 Text Label 7925 2925 0    50   ~ 0
-CLK_SI_3V3
+CSI_MCLK_1V8
 Text Label 7925 3225 0    50   ~ 0
-SENS_RST_3V3
+CSI_nRST_1V8
 Text Label 7925 2825 0    50   ~ 0
-SENS_EN_3V3
+CSI_PWDN_1V8
 Wire Wire Line
 	850  2175 850  2475
 Wire Wire Line
@@ -419,8 +405,6 @@ Wire Wire Line
 Connection ~ 850  2175
 Wire Wire Line
 	850  2175 2250 2175
-NoConn ~ 2250 2275
-NoConn ~ 2250 2375
 Wire Wire Line
 	850  1375 850  1675
 Wire Wire Line
@@ -434,46 +418,111 @@ Wire Wire Line
 	1200 1775 1200 1875
 Wire Wire Line
 	1200 1875 2250 1875
-Wire Wire Line
-	850  4150 4750 4150
-Wire Wire Line
-	850  4250 4750 4250
-Wire Wire Line
-	725  5150 4825 5150
-Wire Wire Line
-	725  5250 4825 5250
-Wire Wire Line
-	800  5750 3025 5750
 Text Label 1500 1975 0    50   ~ 0
 CSI_SYNC_1V8
 $Comp
 L 53261-0271:53261-0271 J3
 U 1 1 618D8A69
-P 4525 6550
-F 0 "J3" H 4655 6546 50  0000 L CNN
-F 1 "53261-0271" H 4655 6455 50  0000 L CNN
-F 2 "MOLEX_53261-0271" H 4525 6550 50  0001 L BNN
-F 3 "" H 4525 6550 50  0001 L BNN
-F 4 "MOLEX" H 4525 6550 50  0001 L BNN "MANUFACTURER"
-	1    4525 6550
+P 3300 4250
+F 0 "J3" H 3430 4246 50  0000 L CNN
+F 1 "53261-0271" H 3430 4155 50  0000 L CNN
+F 2 "MOLEX_53261-0271" H 3300 4250 50  0001 L BNN
+F 3 "" H 3300 4250 50  0001 L BNN
+F 4 "MOLEX" H 3300 4250 50  0001 L BNN "MANUFACTURER"
+	1    3300 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4225 6550 3250 6550
-Wire Wire Line
-	4225 6650 3250 6650
-Text Label 3375 6650 0    50   ~ 0
-TRIGGER
-Text Label 3375 6550 0    50   ~ 0
+	3000 4250 2025 4250
+Text Label 2150 4250 0    50   ~ 0
 FRAME_VALID
-Text Label 3775 4150 0    50   ~ 0
-I2C_DAT_3V3
-Text Label 3775 4250 0    50   ~ 0
-I2C_CLK_3V3
-Text Label 3775 5250 0    50   ~ 0
-SENS_RST_3V3
-Text Label 3775 5150 0    50   ~ 0
-SENS_EN_3V3
-Text Label 2450 5750 0    50   ~ 0
-CLK_SI_3V3
+Wire Wire Line
+	2250 2275 1200 2275
+Wire Wire Line
+	1200 2275 1200 2375
+Wire Wire Line
+	1200 2375 2250 2375
+Text Label 1525 2275 0    50   ~ 0
++3V3
+Text Label 1500 1775 0    50   ~ 0
++12V
+Text Label 1525 1475 0    50   ~ 0
++1V8
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61929544
+P 1200 1575
+F 0 "TP1" V 1303 1647 50  0000 C CNN
+F 1 "TestPoint" V 1304 1647 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1400 1575 50  0001 C CNN
+F 3 "~" H 1400 1575 50  0001 C CNN
+	1    1200 1575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 6192C494
+P 1200 2375
+F 0 "TP2" V 1303 2447 50  0000 C CNN
+F 1 "TestPoint" V 1304 2447 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1400 2375 50  0001 C CNN
+F 3 "~" H 1400 2375 50  0001 C CNN
+	1    1200 2375
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1200 2375
+Connection ~ 1200 1575
+$Comp
+L Connector:TestPoint TP4
+U 1 1 61935342
+P 3300 5225
+F 0 "TP4" V 3403 5297 50  0000 C CNN
+F 1 "TestPoint" V 3404 5297 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3500 5225 50  0001 C CNN
+F 3 "~" H 3500 5225 50  0001 C CNN
+	1    3300 5225
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 619382DF
+P 3300 5975
+F 0 "TP6" V 3403 6047 50  0000 C CNN
+F 1 "TestPoint" V 3404 6047 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3500 5975 50  0001 C CNN
+F 3 "~" H 3500 5975 50  0001 C CNN
+	1    3300 5975
+	0    1    1    0   
+$EndComp
+Connection ~ 4500 2175
+Connection ~ 4500 1675
+$Comp
+L Connector:TestPoint TP5
+U 1 1 6193B248
+P 3300 5725
+F 0 "TP5" V 3403 5797 50  0000 C CNN
+F 1 "TestPoint" V 3404 5797 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3500 5725 50  0001 C CNN
+F 3 "~" H 3500 5725 50  0001 C CNN
+	1    3300 5725
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 1675 4500 2175
+Wire Wire Line
+	3300 5225 2050 5225
+Wire Wire Line
+	3300 5975 2050 5975
+Wire Wire Line
+	3300 5725 2050 5725
+Text Label 2175 5225 0    50   ~ 0
+CSI_MCLK_1V8
+Text Label 2175 5975 0    50   ~ 0
+I2C_SDA_1V8
+Text Label 2175 5725 0    50   ~ 0
+I2C_SCL_1V8
+Text Label 2150 4350 0    50   ~ 0
+TRIGGER
+Wire Wire Line
+	3000 4350 2025 4350
 $EndSCHEMATC
