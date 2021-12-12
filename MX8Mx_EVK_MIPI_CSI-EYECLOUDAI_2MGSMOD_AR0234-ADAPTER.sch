@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Adapter for EYECLOUDAI AR0234CS to MX8M Mini/Plus EVK"
-Date "2021-11-11"
+Date "2021-11-12"
 Rev "V1A"
 Comp "TuxVision"
 Comment1 ""
